@@ -26,10 +26,10 @@ public class program9 {
                 prog2();}
             if(choice==3){
                 prog3();}
-            //if(choice==4){
-               // prog4();}
-            //if(choice==5){
-              //  prog5();}
+            if(choice==4){
+               prog4(choice);}
+            if(choice==5){
+               prog4(choice);}
         }
         while(choice!=6);
     }
@@ -78,6 +78,23 @@ public class program9 {
         perimeter=2*Math.PI*radius;
         area=Math.PI*radius*radius;
         System.out.println("The perimeter of a circle is "+perimeter+" and the area is "+area);
+        menu();
+    }
+    public static void prog4(int choice){
+        Scanner scanner=new Scanner(System.in);
+        double sideA;
+        double sideB;
+        double area;
+        System.out.println("Please Enter a length side");
+        sideA=scanner.nextDouble();
+        if(choice==4){
+            area=sideA*4;
+            System.out.println("the square area is "+area);}
+        else{
+            System.out.println("Please Enter a width side");
+            sideB=scanner.nextDouble();
+            area=sideA*sideB;
+            System.out.println("the rectangle area is "+area);}
         menu();
     }
 }
